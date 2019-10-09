@@ -1,0 +1,119 @@
+@charset "UTF-8";
+main{
+  header{
+    border-bottom: 1px solid #969696;
+    display: flex;
+    justify-content: space-between;
+    h3{
+      display: inline-block;
+      line-height: 30px;
+      font-size: 18px;
+      font-weight: 800;
+      color: #000a1f;
+    }
+    small{
+      color: #002F94;
+      font-weight: bold;
+      font-size: 15px;
+      margin-left: 10px;
+    }
+    a{
+      line-height: 30px;
+      padding-top: 25px;
+      padding-right: 30px;
+    }
+  }
+  .container{
+    .panel-default{
+      border: none;
+    }
+    .mypanel{
+      margin-top: 20px;
+      a{
+        text-decoration: none;
+      }
+      .panel-body{
+        padding: 0;
+      }
+      img{
+        width: 100%;
+      }
+      .panel-heading{
+        background-color: #D54248;
+        color: white;
+      }
+      .panel-footer{
+        background-color: #5D718E;
+        text-indent: 2em;
+        p{
+          color: #fff;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+        }
+        a{
+          color: #fff;
+        }
+      }
+      &:hover{
+        .panel-heading{
+          background-color: #5D718E;
+          color: white;
+        }
+       .panel-footer {
+          background-color: #D54248;
+        }
+      }
+    }
+    .mymedia{
+      display: flex;
+      text-decoration: none;
+      border-bottom: 1px solid #B5B5B5;
+      padding: 20px 0;
+      div.left{
+       background-color: #5A6989;
+        color: white;
+        width: 80px;
+        height: 80px;
+        text-align: center;
+        vertical-align: top;
+        h3{
+          font-weight: 600;
+        }
+        p{
+          margin-bottom: 10px;
+        }
+      }
+      div.right{
+        margin-left: 20px;
+       h5{
+         color: #5F3A69;
+         font-weight: 600;
+         font-size: 15px;
+       }
+      }
+    }
+    .topics{
+      margin-top: 20px;
+      figure{
+        border-bottom: 1px solid #EEEEEE;
+        padding: 2px;
+        img{
+          width: 100%;
+        }
+        figcaption{
+          line-height: 30px;
+          color: #909090;
+        }
+        &:hover{
+        background-color: #5d718e!important;
+          figcaption{
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

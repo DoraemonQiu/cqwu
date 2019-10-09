@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>重庆文理学院</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/detail.css">
+</head>
+<body>
+<header id="head"></header>
+<main>
+    <div class="container">
+        <div class="col-md-3">
+            <ul>
+                <li><h3>新闻中心</h3><small>News Center</small></li>
+                <li style="color: #2084CF">学校新闻</li>
+                <li>媒体视点</li>
+                <li>热点推荐</li>
+            </ul>
+        </div>
+        <div class="col-md-9">
+            <header>
+                <h3>学校新闻</h3>
+                <span>当前位置：<a href="#">首页</a> > <a href="#">学校新闻</a></span>
+            </header>
+            <div>
+                <h4 id="title">学校召开党委常委会专题学习习近平总书记在学校思想政治理论课教师座谈会上的重要讲话精神</h4>
+                <b id="time">发布时间：2019-03-19 10:32 浏览：120次 来源：党群部</b>
+                <p id="content">3月19日上午，学校召开党委常委会，专题学习传达习近平总书记在学校思想政治理论课教师座谈会上的重要讲话精神。校务部、教工部、党群部、纪检部、马克思主义学院负责人列席会议。党委书记孙泽平主持会议。</p>
+                <img id="img" src="images/news1.jpg" alt="">
+                <p id="content1">孙泽平从座谈会召开的基本概况、习近平总书记重要讲话内容等方面作了详细传达。他指出，习近平总书记在座谈会上的重要讲话为做好高校思想政治理论课工作提供了新的遵循，我们要按照习近平总书记的要求，打造一支可信、可敬、可靠，乐为、敢为、有为的思政课教师队伍；充分发挥教师的积极性、主动性、创造性，不断增强思政课的思想性、理论性和亲和力、针对性，坚持政治性和学理性相统一、价值性和知识性相统一、建设性和批判性相统一、理论性和实践性相统一、统一性和多样性相统一、主导性和主体性相统一、灌输性和启发性相统一、显性教育和隐性教育相统一。</p>
+            </div>
+        </div>
+    </div>
+</main>
+<footer id="foot"></footer>
+<script src="js/jquery-2.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $('#head').load('header.html');
+    $('#foot').load('footer.html');
+    $.getJSON('http://localhost:5000/detail'+location.search,function (json) {
+        var src='http://localhost:5000/readImg?'+json[0].imgpath;
+        var d=json[0].date.split('T')[0];
+        $('#title').html(json[0].title);
+        $('#time').html(`发布时间：${d}  浏览：120次 来源：党群部`);
+        $('#content').html(json[0].content);
+        $('#img').attr('src',src);
+        $('#content1').html(json[0].content);
+    })
+</script>
+</body>
+</html>

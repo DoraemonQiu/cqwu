@@ -1,0 +1,269 @@
+<nav class="navbar navbar-inverse navbar-fixed-top mynav" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <!-- sr-only 用于提升可访问性（accessibility），它的含义是 screen reader only（仅提供给屏幕阅读器使用） -->
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!-- 这个元素在移动设备中将被折叠起来 -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav ul-one">
+                <li class="hidden-sm"><a href="index.html">首页</a></li>
+                <li class="hidden-sm hidden-md"><a href="#">邮箱</a></li>
+                <li class="hidden-sm hidden-md"><a href="#">图书</a></li>
+                <li class="hidden-sm"><a href="#">考生</a></li>
+                <li class="hidden-sm"><a href="#">校友总会</a></li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search" action="search.html">
+                <div class="form-group">
+                    <input class="form-control" name="keyword" pattern="\S+" required>
+                </div>
+                <button class="btn btn-link glyphicon glyphicon-search" style="color: #bbb"></button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">网上办事大厅</a></li>
+                <li id="log" class="pub"><a data-toggle="modal" href="#login" id="get_yzm">登录</a></li>
+                <li id="reg" class="pub"><a data-toggle="modal" href="#register">注册</a></li>
+                <li id="nicheng" class="pub hidden"><a href="#" id="nc_info"></a></li>
+                <li id="logout" class="pub hidden"><a href="#">注销</a></li>
+                <li><a href="#">招标</a></li>
+                <li><a href="down.html" id="loadFile">文件下载</a></li>
+                <li><a href="#">English</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="top">
+    <div class="container">
+        <a href="#"><img src="images/logo3.png" alt=""></a>
+    </div>
+    <div class="mainnav">
+        <div class="container">
+            <dl>
+                <dt><a href="#">学校概况</a></dt>
+                <dd>
+                    <a href="#">学校简介</a>
+                    <a href="#">发展历程</a>
+                    <a href="#">现任领导</a>
+                    <a href="#">组织机构</a>
+                    <a href="#">学校标识</a>
+                    <a href="#">校园风光</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt><a href="#">院系设置</a></dt>
+                <dd>
+                    <a href="#">学校简介</a>
+                    <a href="#">发展历程</a>
+                    <a href="#">现任领导</a>
+                    <a href="#">组织机构</a>
+                    <a href="#">学校标识</a>
+                    <a href="#">校园风光</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt><a href="#">人才培养</a></dt>
+                <dd>
+                    <a href="#">学校简介</a>
+                    <a href="#">发展历程</a>
+                    <a href="#">现任领导</a>
+                    <a href="#">组织机构</a>
+                    <a href="#">学校标识</a>
+                    <a href="#">校园风光</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt><a href="#">科学研究</a></dt>
+                <dd>
+                    <a href="#">学校简介</a>
+                    <a href="#">发展历程</a>
+                    <a href="#">现任领导</a>
+                    <a href="#">组织机构</a>
+                    <a href="#">学校标识</a>
+                    <a href="#">校园风光</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt><a href="#">招生就业</a></dt>
+                <dd>
+                    <a href="#">学校简介</a>
+                    <a href="#">发展历程</a>
+                    <a href="#">现任领导</a>
+                    <a href="#">组织机构</a>
+                    <a href="#">学校标识</a>
+                    <a href="#">校园风光</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt><a href="#">校园文化</a></dt>
+                <dd>
+                    <a href="#">学校简介</a>
+                    <a href="#">发展历程</a>
+                    <a href="#">现任领导</a>
+                    <a href="#">组织机构</a>
+                    <a href="#">学校标识</a>
+                    <a href="#">校园风光</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt><a href="#">合作交流</a></dt>
+                <dd>
+                    <a href="#">学校简介</a>
+                    <a href="#">发展历程</a>
+                    <a href="#">现任领导</a>
+                    <a href="#">组织机构</a>
+                    <a href="#">学校标识</a>
+                    <a href="#">校园风光</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt><a href="#">信息公开</a></dt>
+                <dd>
+                    <a href="#">学校简介</a>
+                    <a href="#">发展历程</a>
+                    <a href="#">现任领导</a>
+                    <a href="#">组织机构</a>
+                    <a href="#">学校标识</a>
+                    <a href="#">校园风光</a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<div id="login" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">请登录</h4>
+            </div>
+            <form id="form_login" class="form-horizontal">
+                <div class="modal-body">
+                    <div class="form-group has-feedback">
+                        <label class="col-sm-3 control-label" for="zh1">用户名：</label>
+                        <div class="col-sm-9 require">
+                            <input type="text" class="form-control" name="name" id="zh1">
+                        </div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label class="col-sm-3 control-label" for="pw1">密码：</label>
+                        <div class="col-sm-9 require">
+                            <input type="password"  class="form-control" name="pwd" id="pw1">
+                        </div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label class="col-sm-3 control-label" for="yzm">验证码：</label>
+                        <div class="col-sm-5 require">
+                            <input type="text" class="form-control" name="yzm" id="yzm">
+                        </div>
+                        <div class="col-sm-4" id="svg_yzm"></div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label id="message" class="col-sm-4 control-label pull-left"></label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="submit1" type="submit" class="btn btn-primary">登录</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="register" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">请注册</h4>
+            </div>
+            <form class="form-horizontal" role="form" id="form_register">
+                <div class="modal-body">
+                    <div class="form-group has-feedback">
+                        <label class="col-sm-3 control-label" for="user">用户名：</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="user"  name="name" placeholder="请输入您的用户名">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="pwd">密码：</label>
+                        <div class="col-sm-9">
+                            <input type="password" class="form-control" id="pwd"
+                                 name="pwd"  placeholder="请输入您的密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="repwd">确认密码：</label>
+                        <div class="col-sm-9">
+                            <input type="password" class="form-control" id="repwd"
+                                placeholder="请再输入您的密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="nc">昵称：</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="nc"
+                               name="nc"    placeholder="请输入您的昵称">
+                        </div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label id="message1" class="col-sm-4 control-label pull-left"></label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="submit2" type="submit" class="btn btn-primary">注册</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    $('#get_yzm').click(function () {
+        $.get('http://localhost:5000/yzm',function (rs) {
+            $('#svg_yzm').html(rs);
+        })
+    })
+    $('#form_login').submit(function (e) {
+        e.preventDefault();
+        var data=$('#form_login').serialize();
+        $.getJSON('http://localhost:5000/login',data,function (rs) {
+            if(rs.length!==0){
+                $('.pub').toggleClass('hidden');
+                $('#login').modal('hide');
+                $('#nc_info').html('你好：'+rs[0].nicheng);
+            }else{
+                alert('用户或密码错误');
+            }
+        })
+    })
+    $('#form_register').submit(function (e) {
+        e.preventDefault();
+        if($('#pwd').val()!==$('#repwd').val()){
+            alert('输入的两次密码不一致！');
+        }else{
+            $.getJSON('http://localhost:5000/register',$('#form_register').serialize(),function (rs) {
+                console.log(rs)
+                // if(rs.length!==0){
+                //     $('.pub').toggleClass('hidden');
+                //     $('#register').modal('hide');
+                //     $('#nc_info').html('你好：'+rs[0].nicheng);
+                // }else{
+                //     alert('账号已经被占用');
+                // }
+            })
+        }
+    })
+    $('#logout').click(function () {
+        $('.pub').toggleClass('hidden');
+    })
+</script>
+

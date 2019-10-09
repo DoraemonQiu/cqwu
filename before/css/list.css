@@ -1,0 +1,213 @@
+@charset "UTF-8";
+main header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #EBEBEB;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main header h3 {
+  background-color: #084C9F;
+  color: white;
+  margin: 0;
+  font-size: 16px;
+  padding: 10px;
+}
+main header a {
+  line-height: 40px;
+  color: #8C8C8C;
+  text-decoration: none;
+}
+main header a:hover {
+  color: #084c9f;
+}
+main div.one {
+  margin-top: 20px;
+}
+main div.one .col-md-5 ul {
+  margin: 0;
+  padding: 0;
+}
+main div.one .col-md-5 ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 45px;
+  border-bottom: 1px dashed #EBEBEB;
+}
+main div.one .col-md-5 ul li a {
+  color: #323232;
+  text-decoration: none;
+}
+main div.one .col-md-5 ul li span {
+  color: #969696;
+  font-size: 15px;
+}
+main div.one .col-md-5 ul li:hover {
+  border-bottom-color: #064d9f;
+}
+main div.two {
+  margin-top: 20px;
+}
+main div.two .myfigure {
+  padding: 10px 0 6px 6px;
+  border-bottom: 1px dashed #ECECEC;
+}
+main div.two .myfigure img {
+  width: 80px;
+  float: left;
+  margin-right: 10px;
+}
+main div.two .myfigure figcaption {
+  overflow: hidden;
+  line-height: 25px;
+  text-indent: 2em;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+main div.two .myfigure:hover {
+  border-bottom-color: #064d9f;
+}
+main div.two .video img {
+  width: 100%;
+  padding: 20px 0;
+}
+main div.two .mymedia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  border-bottom: 1px dashed #B5B5B5;
+  padding: 10px 0;
+  margin: 1px 0;
+}
+main div.two .mymedia div.left {
+  text-align: center;
+  color: #23527C;
+  width: 80px;
+  height: 80px;
+  margin-left: 3px;
+}
+main div.two .mymedia div.left h3 {
+  font-weight: 600;
+  margin-top: 10px;
+  padding: 0;
+}
+main div.two .mymedia div.left p {
+  margin-bottom: 10px;
+  padding: 0;
+}
+main div.two .mymedia div.right {
+  margin-left: 20px;
+}
+main div.two .mymedia div.right h5 {
+  color: #5F3A69;
+  font-weight: 600;
+  font-size: 15px;
+  margin: 0;
+}
+main div.two .mymedia div.right p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #AEAEAE;
+}
+main div.two .mymedia:hover {
+  border-bottom: 1px dashed #054EA6;
+  border-left: 1px dashed #054EA6;
+}
+main div.two .mymedia:hover div.left {
+  border: 1px solid #054EA6;
+}
+main div.two ul {
+  margin: 0;
+  padding: 0;
+}
+main div.two ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 45px;
+  border-bottom: 1px dashed #EBEBEB;
+}
+main div.two ul li a {
+  color: #323232;
+  text-decoration: none;
+  overflow: hidden;
+  /*超出长度的文字隐藏*/
+  text-overflow: ellipsis;
+  /*文字隐藏以后添加省略号*/
+  white-space: nowrap;
+  /*强制不换行*/
+}
+main div.two ul li span {
+  color: #969696;
+  font-size: 15px;
+  width: 80px;
+}
+main div.two ul li:hover {
+  border-bottom-color: #064d9f;
+}
+main div.two p {
+  padding: 0 20px;
+}
+main div.two .two-wx {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid #C0C0C0;
+  padding-top: 5px;
+}
+main div.two .two-wx figure img {
+  width: 90px;
+  margin: 0 20px;
+}
+main div.two .two-wx figure figcaption {
+  text-align: center;
+}
+main div.three {
+  margin-top: 20px;
+}
+main div.three .col-md-3 {
+  padding: 10px;
+}
+main div.three figure {
+  text-align: center;
+}
+main div.three figure img {
+  width: 98%;
+}
+main div.three figure:hover {
+  border: 2px solid blue;
+}
+main div.three figure figcaption {
+  line-height: 40px;
+  background-color: #E8E8E8;
+}
+main div.four {
+  margin-bottom: 20px;
+}
+main div.four section {
+  border-bottom: 1px solid #DDDDDD;
+  margin-bottom: 20px;
+}
+main div.four div.col-md-2 img {
+  width: 100%;
+  height: 35px;
+}
+main div.four div.col-md-2 img:hover {
+  border: 1px solid #DDDDDD;
+}

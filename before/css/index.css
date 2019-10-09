@@ -1,0 +1,119 @@
+@charset "UTF-8";
+main header {
+  border-bottom: 1px solid #969696;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main header h3 {
+  display: inline-block;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #000a1f;
+}
+main header small {
+  color: #002F94;
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 10px;
+}
+main header a {
+  line-height: 30px;
+  padding-top: 25px;
+  padding-right: 30px;
+}
+main .container .panel-default {
+  border: none;
+}
+main .container .mypanel {
+  margin-top: 20px;
+}
+main .container .mypanel a {
+  text-decoration: none;
+}
+main .container .mypanel .panel-body {
+  padding: 0;
+}
+main .container .mypanel img {
+  width: 100%;
+}
+main .container .mypanel .panel-heading {
+  background-color: #D54248;
+  color: white;
+}
+main .container .mypanel .panel-footer {
+  background-color: #5D718E;
+  text-indent: 2em;
+}
+main .container .mypanel .panel-footer p {
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+main .container .mypanel .panel-footer a {
+  color: #fff;
+}
+main .container .mypanel:hover .panel-heading {
+  background-color: #5D718E;
+  color: white;
+}
+main .container .mypanel:hover .panel-footer {
+  background-color: #D54248;
+}
+main .container .mymedia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  border-bottom: 1px solid #B5B5B5;
+  padding: 20px 0;
+}
+main .container .mymedia div.left {
+  background-color: #5A6989;
+  color: white;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  vertical-align: top;
+}
+main .container .mymedia div.left h3 {
+  font-weight: 600;
+}
+main .container .mymedia div.left p {
+  margin-bottom: 10px;
+}
+main .container .mymedia div.right {
+  margin-left: 20px;
+}
+main .container .mymedia div.right h5 {
+  color: #5F3A69;
+  font-weight: 600;
+  font-size: 15px;
+}
+main .container .topics {
+  margin-top: 20px;
+}
+main .container .topics figure {
+  border-bottom: 1px solid #EEEEEE;
+  padding: 2px;
+}
+main .container .topics figure img {
+  width: 100%;
+}
+main .container .topics figure figcaption {
+  line-height: 30px;
+  color: #909090;
+}
+main .container .topics figure:hover {
+  background-color: #5d718e!important;
+}
+main .container .topics figure:hover figcaption {
+  color: white;
+}

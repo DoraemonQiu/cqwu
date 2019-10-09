@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>重庆文理学院</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/listmore.css">
+</head>
+<body>
+<template id="temp">
+    <li class="media">
+        <a href="detail.html?id={id}">
+            <img class="media-object pull-left" src="{src}">
+            <div class="media-body">
+                <h4 class="media-heading">{title}
+                    <span class="pull-right hidden-xs">{date}</span>
+                </h4>
+                <div>{content}</div>
+            </div>
+        </a>
+    </li>
+</template>
+<header id="head"></header>
+<main class="container">
+    <div class="row">
+        <aside class="col-sm-3 hidden-xs">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4 class="hidden-sm">新闻中心
+                        <small>News Center</small>
+                    </h4>
+                    <h4 class="visible-sm">新闻中心</h4>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="#">学校新闻</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#">媒体视点</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#">热点推荐</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div class="col-sm-9 new_list">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">学校新闻
+                        <div class="pull-right">当前位置：
+                            <a href="#">首页 \ </a><a href="#" class="active">学校新闻</a>
+                        </div>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <ul id="list" class="media-list">
+
+                    </ul>
+                </div>
+                <div class="page text-center">
+                    <ul class="pagination">
+                        <li><a href="##">&laquo;首页</a></li>
+                        <li><a href="##">&lt;上一页</a></li>
+                        <li><a href="##">下一页&gt;</a></li>
+                        <li><a href="##">尾页&raquo;</a></li>
+                        <li class="disabled">
+                            <a href="##" id="show_info"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer id="foot"></footer>
+<script src="js/jquery-2.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $('#head').load('header.html');
+    $('#foot').load('footer.html');
+    var cur_page=0,pages=0;
+    $.getJSON('http://localhost:5000/pages',function (rs) {
+        pages=Math.ceil(rs/5);
+    })
+    var html=$('#temp').html();
+    function show(cur_page){
+        $.getJSON('http://localhost:5000/current',{cur_page:cur_page},function (res) {
+            $('#list').empty();
+            res.forEach(function (el) {
+                var src='http://localhost:5000/readImg?'+el.imgpath;
+                var d=el.date.split('T')[0];
+                $('#list').append(html.replace('{id}',el.id).replace('{src}',src)
+                    .replace('{title}',el.title) .replace('{content}',el.content)
+                    .replace('{date}',d));
+                $('#show_info').html(cur_page+1+'/'+pages);
+            })
+        })
+        if(cur_page==0){
+            $('ul.pagination').children(':lt(2)').addClass('disabled');
+            $('ul.pagination').children(':gt(1)').removeClass('disabled').eq(2).addClass('disabled');
+        }else if(cur_page==pages-1){
+            $('ul.pagination').children(':gt(1)').addClass('disabled');
+            $('ul.pagination').children(':lt(2)').removeClass('disabled')
+        }else {
+            $('ul.pagination').children(':lt(4)').removeClass('disabled')
+        }
+    }
+    show(0);
+    $('ul.pagination').on('click','li',function () {
+        var index = $(this).index();
+        switch(index){
+            case 0:
+                cur_page=0
+                break;
+            case 1:
+                if(cur_page===0) cur_page===0
+                else cur_page--;
+                break;
+            case 2:
+                if(cur_page===pages) cur_page=pages-1;
+                else cur_page++;
+                break;
+            case 3:
+                cur_page=pages-1;
+                break;
+        }
+        show(cur_page);
+    })
+</script>
+</body>
+</html>
